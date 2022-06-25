@@ -1,0 +1,66 @@
+namespace OSMImporter;
+
+enum EntityType: byte {
+    ERROR,
+
+    NODE_HIGHWAY_STREET_LAMP,
+    NODE_TREE,
+    NODE_VEGETATION,
+
+    POLYLINE_HIGHWAY_DEFAULT,
+    POLYLINE_HIGHWAY_PRIMARY,
+    POLYLINE_HIGHWAY_SECONDARY,
+    POLYLINE_HIGHWAY_RESIDENTIAL,
+    POLYLINE_HIGHWAY_SERVICE,
+    POLYLINE_HIGHWAY_CYCLEWAY,
+    POLYLINE_HIGHWAY_FOOTWAY,
+    POLYLINE_RIVER,
+    POLYLINE_STREAM,
+
+    POLYGON_HIGHWAY,
+    POLYGON_BUILDING_ROOF,
+    POLYGON_BUILDING_WALL,
+    POLYGON_WATER,
+    POLYGON_FOREST,
+    POLYGON_GRASS,
+
+    NODE_POI_RELIGION,
+    NODE_POI_CASTLE,
+    NODE_POI_ARTS_CENTER,
+    NODE_POI_PEAK,
+}
+
+struct Vec3 {
+  x: float;
+  y: float;
+  z: float;
+}
+
+struct Vec2 {
+  x: float;
+  y: float;
+}
+
+table Entry {
+  entityType: EntityType = ERROR;
+  height: byte = 0;
+  name: string;
+  poi: bool;
+  holeStartId: int;
+  vertices: [Vec3];
+  triangles: [uint];
+  uvs: [Vec2];
+}
+
+table EntryList {
+  list: [Entry];
+  heightMap: [float];
+  startX: long;
+  startY: long;
+  centerX: long;
+  centerY: long;
+  topRight: Vec3;
+  bottomLeft: Vec3;
+}
+
+root_type EntryList;

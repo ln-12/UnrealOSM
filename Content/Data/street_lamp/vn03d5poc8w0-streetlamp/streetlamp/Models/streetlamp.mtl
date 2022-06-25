@@ -1,0 +1,34 @@
+newmtl phong1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.02 0.02 0.02
+Tf 1.00 1.00 1.00
+map_Kd MetalBase0121_9_S.jpg
+Ni 1.00
+Ks 0.00 0.00 0.00
+Ns 98.00
+newmtl phong2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd MetalBase0121_9_S.jpg
+Ni 1.00
+Ks 0.50 0.50 0.50
+Ns 18.00
+newmtl phongE1SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd MetalBase0123_S.jpg
+Ni 1.00
+Ks 0.50 0.50 0.50
+newmtl phongE2SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 0.57 0.57 0.57
+map_Kd Fiberglass0014_S.jpg
+Ni 1.00
+Ks 0.59 0.59 0.59
